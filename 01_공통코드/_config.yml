@@ -1,7 +1,0 @@
-title: 위성영상 프로젝트 보고서
-lang: ko
-markdown: kramdown
-kramdown:
-  input: GFM
-exclude:
-  - README.md
