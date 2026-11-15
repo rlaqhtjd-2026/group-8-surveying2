@@ -170,8 +170,6 @@ python 01_공통코드/advanced_analysis.py
 
 #### 연구 배경 참고문헌
 
-# References
-
 국립환경과학원. (2026, 7월 2일). *인공지능 기반 첨단 원격탐사 기술로 실시간 광역형 녹조관리 시대 연다* [보도자료]. https://www.mcee.go.kr/home/web/board/read.do?boardId=1875000&boardMasterId=939&menuId=10598
 
 기후에너지환경부, & 농림축산식품부. (2026, 2월 25일). *낙동강 수질개선 대책 발표 … 2030년까지 주요 취수원 수질 Ⅰ등급 달성 목표* [보도자료]. https://www.mcee.go.kr/home/web/board/read.do?boardId=1845110&boardMasterId=939&menuId=10598
