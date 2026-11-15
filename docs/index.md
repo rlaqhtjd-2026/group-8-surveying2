@@ -19,7 +19,23 @@ badge: "DEMO / 실제 관측 결과 아님"
 
 ## 1. 연구 배경 {#background}
 
-작성 예정. 연구의 필요성과 관련 선행연구를 조사하고 출처를 기록합니다.
+ 최근 기후변화에 따른 여름철 기온 상승과 폭염·가뭄 등 이상기후로 낙동강 하류 구간의 녹조 발생 위험이 증가하고 있다(손희종 외, 2024; 장가연 외, 2024; Paerl, 2018). 대규모 녹조는 수질 악화와 이취미 문제를 유발하여 수자원의 이용과 관리에 부정적인 영향을 미치며, 일부 남조류가 생성하는 독소는 인간과 동물의 건강에 잠재적인 위해를 초래한다(Paerl and Otten, 2013; WHO, 2024). 특히 낙동강은 영남 지역 약 1,300만 명의 식수원으로(기후에너지환경부·농림축산식품부, 2026), 낙동강의 녹조 문제는 식수 공급과 직결된다.
+
+ 이와 같은 녹조 피해에 대응하기 위해 환경부는 1998년 조류경보제를 도입하였다(환경부·국립환경과학원, 2025). 조류경보제는 상수원으로 이용되는 하천·호소의 지정된 채수지점에서 남조류를 주기적으로 모니터링하고, 그 결과에 따라 단계별 경보를 발령하여 조류로 인한 피해를 최소화하는 제도이다(물환경보전법 제21조; 같은 법 시행령 제28조). 낙동강에서는 2016년부터 하천 구간에 조류경보제가 적용되어 현재 해평, 강정·고령, 칠서, 물금·매리 4개 지점에서 운영되고 있다(환경부·국립환경과학원, 2025). 이 중 물금·매리 지점은 기존 칠서(구 창녕·함안) 지점으로는 하류 취수장의 녹조 상황을 반영하기 어렵다는 문제가 제기되어, 2020년 시범운영을 거쳐 2021년부터 정식운영 지점으로 추가되었다(부산광역시, 2020; 환경부·국립환경과학원, 2025).
+
+ 녹조는 채수지점의 위치에 따라 다르게 관측될 수 있다. 녹조 발생에는 수온, 강수량, 영양염류 농도, 유속, 체류시간 등 여러 환경요인이 영향을 미친다(Cha *et al*., 2016; Paerl and Otten, 2013). 이러한 요인은 같은 하천 안에서도 위치마다 다르기 때문에, 녹조 역시 수역 전체에 불균일하게 분포할 수 있다(환경부·국립환경과학원, 2025). 실제로 Cha *et al*.(2016)은 낙동강 본류에서 상·하류 방향에 따른 클로로필-a(Chlorophyll-a, Chl-a) 농도의 공간적 차이를 제시하였으며, 나은혜 외(2015)는 강정고령보 구간에서 횡방향의 Chl-a 농도 차이를 확인하였다. 또한, Lehmann et al.(2021)은 호소 내 Chl-a 농도의 불균일성으로 인해 단일 채수지점에서의 관측값이 수역 전체를 충분히 대표하지 못할 수 있음을 제시하였다.
+
+ 이처럼 단일 채수지점의 관측값이 구간 내 다른 위치의 녹조 상황을 어느 정도 반영하는지에 관한 공간적 대표성 문제는 실제 조류경보제 운영 과정에서도 제기되었다. 낙동강에서는 기존 채수지점의 관측값이 불과 2~4 km 떨어진 취수구 주변의 녹조 상황과 차이가 있다는 지적에 따라, 2025년 8월 물금·매리를 포함한 4개 지점의 채수 위치가 변경되었다(환경부, 2025). 이는 동일한 구간 내의 비교적 가까운 지점 간에도 녹조 관측 결과가 달라질 수 있음을 시사한다. 따라서 변경된 현재 채수지점이 구간 전체의 녹조 분포를 어느 정도 반영하는지 확인할 필요가 있다.
+
+<img width="1503" height="761" alt="image" src="https://github.com/user-attachments/assets/81b59800-493d-478e-acdf-da15bb9bcecd" />
+
+
+ 단일 지점 채수를 보완하는 방안으로 위성영상이 활용되고 있다(국립환경과학원, 2026). 위성영상은 광범위한 수역의 표층을 면 단위로 반복 관측할 수 있다는 점에서 넓은 구간의 녹조 분포 분석에 적합하다(Toming et al., 2016). 다만 위성영상에서 산출한 분광지수는 Chl-a 농도 자체를 의미하지 않으므로, 이를 이용한 Chl-a 농도 추정을 위해서는 분광지수와 현장 측정 Chl-a 농도 간의 정량적 관계 설정이 선행되어야 한다(Mishra and Mishra, 2012).
+
+ 낙동강에서도 원격탐사를 활용한 녹조 관련 연구가 수행되어 왔다. 김흥민 외(2022)는 물금·매리 구간에서 무인항공기 다중분광영상을 활용하여 Chl-a 농도의 공간분포와 녹조 발생 특성을 제시하였다. 박소련 외(2023)는 Sentinel-2 영상과 수질·수문·기상 인자를 결합한 머신러닝 모델을 통해 낙동강 8개 보 구간의 Chl-a 농도를 추정하였으며, 진경원 외(2025)는 Sentinel-2 영상과 AutoML 기반 앙상블 모델을 활용하여 낙동강의 Chl-a를 포함한 수질 지표를 추정하였다. 그러나 이들 연구는 주로 Chl-a 농도의 추정과 공간분포 파악에 초점을 두었으며, 원격탐사 기반 공간정보를 활용하여 조류경보 채수지점의 공간적 대표성을 정량적으로 평가한 연구는 제한적이다.
+
+ 이에 본 연구는 낙동강 최하류의 상수원 구간이자 최근 채수지점이 변경된 물금·매리 구간을 대상으로, 위성영상을 활용하여 현재 조류경보 채수지점이 구간 전체의 녹조 분포를 어느 정도 반영하는지 Chl-a 농도를 기준으로 평가하고자 한다. 이를 통해 향후 녹조 모니터링의 채수지점 선정과 관측 범위 검토를 위한 기초자료를 제공하고자 한다.
+
 
 ## 2. 연구 질문 {#question}
 
@@ -154,5 +170,44 @@ python 01_공통코드/advanced_analysis.py
 
 #### 연구 배경 참고문헌
 
-- Voogt, J. A., & Oke, T. R. (2003). Thermal remote sensing of urban climates. *Remote Sensing of Environment, 86*(3), 370–384. [https://doi.org/10.1016/S0034-4257(03)00079-8](https://doi.org/10.1016/S0034-4257(03)00079-8).
-- Schwaab, J., Meier, R., Mussetti, G., Seneviratne, S., Bürgi, C., & Davin, E. L. (2021). The role of urban trees in reducing land surface temperatures in European cities. *Nature Communications, 12*, 6763. [https://doi.org/10.1038/s41467-021-26768-w](https://doi.org/10.1038/s41467-021-26768-w).
+# References
+
+국립환경과학원. (2026, 7월 2일). *인공지능 기반 첨단 원격탐사 기술로 실시간 광역형 녹조관리 시대 연다* [보도자료]. https://www.mcee.go.kr/home/web/board/read.do?boardId=1875000&boardMasterId=939&menuId=10598
+
+기후에너지환경부, & 농림축산식품부. (2026, 2월 25일). *낙동강 수질개선 대책 발표 … 2030년까지 주요 취수원 수질 Ⅰ등급 달성 목표* [보도자료]. https://www.mcee.go.kr/home/web/board/read.do?boardId=1845110&boardMasterId=939&menuId=10598
+
+김흥민, 최은영, & 장선웅. (2022). 무인항공기 기반 다중분광영상을 이용한 낙동강 Chlorophyll-a 및 녹조발생지수 분석. *한국지리정보학회지, 25*(1), 101–119. https://doi.org/10.11108/kagis.2022.25.1.101
+
+나은혜, 박수영, 김종하, 임성수, & 김경현. (2015). 낙동강 중류 보 구간에서의 시·공간적 수질 분포 특성 연구. *한국물환경학회지, 31*(6), 723–731. https://doi.org/10.15681/KSWE.2015.31.6.723
+
+물환경보전법, 법률 제21368호 (2026). 국가법령정보센터. https://www.law.go.kr/법령/물환경보전법/제21조
+
+물환경보전법 시행령, 대통령령 제36220호 (2026). 국가법령정보센터. https://www.law.go.kr/법령/물환경보전법시행령/제28조
+
+박소련, 손상훈, 배재구, 이도이, 서동주, & 김진수. (2023). 머신러닝 기반 위성영상과 수질·수문·기상 인자를 활용한 낙동강의 Chlorophyll-a 농도 추정. *대한원격탐사학회지, 39*(5), 655–667. https://doi.org/10.7780/kjrs.2023.39.5.1.15
+
+부산광역시. (2020, 5월 7일). *부산시, 조류경보제 시범 운영지점(물금·매리) 유치* [보도자료]. https://www.busan.go.kr/nbtnewsBU/1432400
+
+손희종, 정은영, 김고은, 장성호, & 안병렬. (2024). 낙동강 하류의 식물 플랑크톤 생체량의 장기변동 특성: 2000~2021년. *대한환경공학회지, 46*(11), 687–694. https://doi.org/10.4491/KSEE.2024.46.11.687
+
+장가연, 조민경, 김자연, 김상준, 박힘찬, & 박준홍. (2024). 기후변화 시나리오의 기온상승에 따른 낙동강 남세균 발생 예측을 위한 데이터 기반 모델 시뮬레이션. *한국물환경학회지, 40*(3), 121–129. https://doi.org/10.15681/KSWE.2024.40.3.121
+
+진경원, 김지홍, & 지준화. (2025). Sentinel-2 위성 영상을 활용한 AutoML 기반 앙상블 모델의 낙동강 수질 지표 추정. *대한원격탐사학회지, 41*(3), 501–512. https://doi.org/10.7780/kjrs.2025.41.3.1
+
+환경부. (2025, 8월 19일). *녹조 수질검사·정보공개 전면 개편… 녹조 문제 근본적 해결 위한 첫걸음* [보도자료]. https://www.mcee.go.kr/home/web/board/read.do?boardId=1759590&boardMasterId=939&menuId=10598
+
+환경부, & 국립환경과학원. (2025). *조류경보제 운영 매뉴얼(2025.8).* https://www.water.or.kr/upload/board/2026/04/20260416110044_1.pdf
+
+Cha, Y., Park, S. S., Lee, H. W., & Stow, C. A. (2016). A Bayesian hierarchical approach to model seasonal algal variability along an upstream to downstream river gradient. *Water Resources Research, 52*(1), 348–357. https://doi.org/10.1002/2015WR017327
+
+Lehmann, M. K., Schütt, E. M., Hieronymi, M., Dare, J., & Krasemann, H. (2021). Analysis of recurring patchiness in satellite-derived chlorophyll a to aid the selection of representative sites for lake water quality monitoring. *International Journal of Applied Earth Observation and Geoinformation, 104*, 102547. https://doi.org/10.1016/j.jag.2021.102547
+
+Mishra, S., & Mishra, D. R. (2012). Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. *Remote Sensing of Environment, 117*, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
+
+Paerl, H. W. (2018). Mitigating toxic planktonic cyanobacterial blooms in aquatic ecosystems facing increasing anthropogenic and climatic pressures. *Toxins, 10*(2), 76. https://doi.org/10.3390/toxins10020076
+
+Paerl, H. W., & Otten, T. G. (2013). Harmful cyanobacterial blooms: Causes, consequences, and controls. *Microbial Ecology, 65*(4), 995–1010. https://doi.org/10.1007/s00248-012-0159-y
+
+Toming, K., Kutser, T., Laas, A., Sepp, M., Paavel, B., & Nõges, T. (2016). First experiences in mapping lake water quality parameters with Sentinel-2 MSI imagery. *Remote Sensing, 8*(8), 640. https://doi.org/10.3390/rs8080640
+
+World Health Organization. (2024). *Management of cyanobacteria in drinking-water supplies: Information for regulators and water suppliers* (2nd ed.). https://doi.org/10.2471/B09130
