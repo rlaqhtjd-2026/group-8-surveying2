@@ -31,7 +31,7 @@ badge: "DEMO / 실제 관측 결과 아님"
 
 <img width="1503" height="761" alt="image" src="https://github.com/user-attachments/assets/81b59800-493d-478e-acdf-da15bb9bcecd" />
 
- 단일 지점 채수를 보완하는 방안으로 위성영상이 활용되고 있다(국립환경과학원, 2026). 위성영상은 광범위한 수역의 표층을 면 단위로 반복 관측할 수 있다는 점에서 넓은 구간의 녹조 분포 분석에 적합하다(Toming et al., 2016). 다만 위성영상에서 산출한 분광지수는 Chl-a 농도 자체를 의미하지 않으므로, 이를 이용한 Chl-a 농도 추정을 위해서는 분광지수와 현장 측정 Chl-a 농도 간의 정량적 관계 설정이 선행되어야 한다(Mishra and Mishra, 2012).
+ 단일 지점 채수를 보완하는 방안으로 위성영상이 활용되고 있다(국립환경과학원, 2026). 특히 Sentinel-2 위성영상은 광범위한 수역의 표층을 면 단위로 반복 관측할 수 있다는 점에서 넓은 구간의 녹조 분포 분석에 적합하다(Toming et al., 2016). 다만 조류경보의 발령 기준은 유해남조류 세포수이지만, Sentinel-2 위성에는 남조류의 주요 색소인 피코시아닌(phycocyanin)의 흡수 파장대(약 620 nm)를 관측하는 밴드가 없어 유해남조류 세포수를 추정하는 데 한계가 있다(Simis et al., 2005; Drusch et al., 2012). 이에 Sentinel-2 기반의 녹조 연구에서는 식물플랑크톤의 공통 색소인 Chl-a와 관련된 분광지수가 활용되어 왔으며(박소련 외, 2023; 진경원 외, 2025), 적색·적색경계 밴드를 이용한 NDCI가 대표적이다(Mishra and Mishra, 2012). 이때 위성영상에서 산출한 분광지수가 Chl-a 농도 자체를 의미하지는 않으므로, 이를 이용한 Chl-a 농도 추정을 위해서는 분광지수와 현장 측정 Chl-a 농도 간의 정량적 관계 설정이 선행되어야 한다(Mishra and Mishra, 2012).
  
  낙동강에서도 원격탐사를 활용한 녹조 관련 연구가 수행되어 왔다. 김흥민 외(2022)는 물금·매리 구간에서 무인항공기 다중분광영상을 활용하여 Chl-a 농도의 공간분포와 녹조 발생 특성을 제시하였다. 박소련 외(2023)는 Sentinel-2 영상과 수질·수문·기상 인자를 결합한 머신러닝 모델을 통해 낙동강 8개 보 구간의 Chl-a 농도를 추정하였으며, 진경원 외(2025)는 Sentinel-2 영상과 AutoML 기반 앙상블 모델을 활용하여 낙동강의 Chl-a를 포함한 수질 지표를 추정하였다. 그러나 이들 연구는 주로 Chl-a 농도의 추정과 공간분포 파악에 초점을 두었으며, 원격탐사 기반 공간정보를 활용하여 조류경보 채수지점의 공간적 대표성을 정량적으로 평가한 연구는 제한적이다.
  
@@ -221,6 +221,8 @@ python 01_공통코드/advanced_analysis.py
 
 Cha, Y., Park, S. S., Lee, H., & Stow, C. A. (2016). A Bayesian hierarchical approach to model seasonal algal variability along an upstream to downstream river gradient. *Water Resources Research, 52*(1), 348–357. https://doi.org/10.1002/2015WR017327
 
+Drusch, M., Del Bello, U., Carlier, S., Colin, O., Fernandez, V., Gascon, F., Hoersch, B., Isola, C., Laberinti, P., Martimort, P., Meygret, A., Spoto, F., Sy, O., Marchese, F., & Bargellini, P. (2012). Sentinel-2: ESA’s optical high-resolution mission for GMES operational services. *Remote Sensing of Environment, 120*, 25–36. https://doi.org/10.1016/j.rse.2011.11.026
+
 Lehmann, M., Schütt, E., Hieronymi, M., Dare, J., & Krasemann, H. (2021). Analysis of recurring patchiness in satellite-derived chlorophyll a to aid the selection of representative sites for lake water quality monitoring. *International Journal of Applied Earth Observation and Geoinformation, 104*, 102547. https://doi.org/10.1016/j.jag.2021.102547
 
 Lopez Barreto, B. N., Hestir, E. L., Lee, C. M., & Beutel, M. W. (2024). Satellite remote sensing: A tool to support harmful algal bloom monitoring and recreational health advisories in a California reservoir. *GeoHealth, 8*(2), e2023GH000941. https://doi.org/10.1029/2023GH000941
@@ -230,6 +232,8 @@ Mishra, S., & Mishra, D. R. (2012). Normalized difference chlorophyll index: A n
 Paerl, H. W. (2018). Mitigating toxic planktonic cyanobacterial blooms in aquatic ecosystems facing increasing anthropogenic and climatic pressures. *Toxins, 10*(2), 76. https://doi.org/10.3390/toxins10020076
 
 Paerl, H. W., & Otten, T. G. (2013). Harmful cyanobacterial blooms: Causes, consequences, and controls. *Microbial Ecology, 65*(4), 995–1010. https://doi.org/10.1007/s00248-012-0159-y
+
+Simis, S. G. H., Peters, S. W. M., & Gons, H. J. (2005). Remote sensing of the cyanobacterial pigment phycocyanin in turbid inland water. *Limnology and Oceanography, 50*(1), 237–245. https://doi.org/10.4319/lo.2005.50.1.0237
 
 Teixeira, M. G. L. C., Costa, M. C. N., de Carvalho, V. L. P., Pereira, M. S., & Hage, E. (1993). Gastroenteritis epidemic in the area of the Itaparica Dam, Bahia, Brazil. *Bulletin of the Pan American Health Organization, 27*(3), 244–253.
 
