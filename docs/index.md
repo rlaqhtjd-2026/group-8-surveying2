@@ -93,33 +93,275 @@ badge: "DEMO / 실제 관측 결과 아님"
 
 기존·현재 채수지점의 대표 면적, 대표 비율 및 방향별 대표 거리를 관측일별로 비교한다. 또한 두 지점의 대표 범위 지도를 비교하여, 현재 위치를 기준으로 대표 범위에 새롭게 포함되는 수역과 제외되는 수역, 사각지대의 위치 및 면적 변화를 파악한다. 이러한 비교 결과를 종합하여, 채수지점 변경으로 공간적 대표성이 어떻게 달라지는지 확인하고 변경의 적절성을 평가한다.
 
+<style>
+.report-chapters{font-size:1rem;line-height:1.9}
+.report-chapters .report-table-wrap{max-width:100%;overflow-x:auto;margin:1.5rem 0}
+.report-chapters .report-table{width:100%;border-collapse:collapse;border-top:2px solid #203530;border-bottom:2px solid #203530;font-size:0.95rem}
+.report-chapters .report-table caption{caption-side:top;text-align:center;font-weight:700;padding:0 0 0.7rem;color:#203530}
+.report-chapters .report-table th,.report-chapters .report-table td{padding:0.6rem 0.75rem;border:0;border-bottom:1px solid #dbe5df;text-align:center;vertical-align:middle}
+.report-chapters .report-table thead th{background:#edf3ec;border-bottom:1px solid #203530}
+.report-chapters .report-table tbody tr:last-child td{border-bottom:0}
+.report-chapters .station-table td:first-child{white-space:nowrap}
+.report-chapters .station-table tbody tr:nth-last-child(-n+2) td:not(:first-child){white-space:nowrap;font-variant-numeric:tabular-nums}
+.report-chapters .report-figure{margin:2rem 0}
+.report-chapters .report-figure img{display:block;width:100%;max-width:100%;height:auto;max-height:none;border:0;border-radius:0;margin:0;background:#fff}
+.report-chapters .report-figure figcaption{margin-top:0.7rem;font-size:0.95rem;line-height:1.7;color:#425951;text-align:left}
+.report-chapters .report-equation{max-width:100%;overflow-x:auto;margin:1.2rem 0;padding:0.2rem 0;text-align:center}
+.report-chapters .legend-swatch{display:inline-block;width:1rem;height:1rem;margin-right:0.45rem;border:1px solid #7c8782;vertical-align:-0.12rem}
+@media(max-width:600px){.report-chapters .report-table{min-width:460px}.report-chapters .report-table th,.report-chapters .report-table td{padding:0.5rem}}
+</style>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<div class="report-chapters" markdown="1">
+
 ## 4. 재료 {#materials}
 
-### 4.1 자료 구성 및 생성 조건 {#advanced-data}
+### 4.1 연구 대상 수역과 채수지점 {#advanced-data}
 
-작성 예정
+본 연구는 낙동강 하류의 조류경보제 운영 구간인 물금·매리 구간을 연구 대상 수역으로 선정하였다. 2025년 8월 채수지점이 매리취수구 상류 약 3 km에서 취수구 인근 약 50 m 지점으로 변경되었으며, 과거·현재 채수지점의 위치와 좌표는 표 1에 제시하였다(환경부·국립환경과학원, 2025).
 
+<div class="report-table-wrap">
+<table class="report-table station-table">
+<caption>표 1. 물금·매리 구간의 과거·현재 채수지점</caption>
+<thead><tr><th scope="col">항목</th><th scope="col">과거 채수지점</th><th scope="col">현재 채수지점</th></tr></thead>
+<tbody>
+<tr><td>행정구역</td><td>경상남도 김해시 상동면 감노리</td><td>경상남도 김해시 상동면 매리</td></tr>
+<tr><td>상대적 위치</td><td>매리취수구 상류 약 3 km</td><td>매리취수구 인근 약 50 m</td></tr>
+<tr><td>경도(°)</td><td>128.9334638888889</td><td>128.9523888889</td></tr>
+<tr><td>위도(°)</td><td>35.34826944444445</td><td>35.33525</td></tr>
+</tbody>
+</table>
+</div>
+
+자료: 환경부·국립환경과학원(2020: 과거 지점, 2025: 현재 지점).
+
+주: 좌표는 WGS84 지리좌표계(EPSG:4326)를 기준으로 하며, 경도와 위도를 십진도(°)로 표기하였다.
+
+분석 영역은 현재 채수지점을 중심으로 한 20 km × 20 km의 정사각형 구역 내 낙동강 수면으로 설정하였으며, 본 연구 내에서 물금·매리 구간은 이 분석 영역 내 낙동강 본류 수면 구간으로 정의하였다. 과거·현재 채수지점의 대표 범위를 동일한 공간 조건에서 비교하기 위해, 세부 연구목적 3에서도 분석 영역을 과거 채수지점 중심으로 이동하지 않고 세부 연구목적 2와 동일하게 유지하였다. 과거 채수지점은 현재 채수지점에서 서쪽으로 약 1.7 km, 북쪽으로 약 1.4 km 떨어져 있다(표 1). 이에 두 채수지점의 대표 범위가 분석 영역의 경계에 의해 제한될 가능성을 줄이기 위해 분석 영역을 20 km × 20 km로 설정하였으며, 이 경우 두 채수지점에서 영역 경계까지의 최단 거리는 모두 최소 8 km 이상이다. 연구 대상 수역과 분석 영역, 과거·현재 채수지점의 위치는 Figure 2에 제시하였다.
+
+<!-- 그림 2: docs/figures/figure2_study_area.png에 업로드 -->
+<figure class="report-figure" id="figure-2">
+<a href="{{ '/figures/figure2_study_area.png' | relative_url }}" target="_blank" rel="noopener">
+<img src="{{ '/figures/figure2_study_area.png' | relative_url }}" alt="현재 채수지점 중심의 20 km × 20 km 분석 영역과 과거·현재 채수지점, 낙동강 본류 수면" width="3780" height="2295" loading="lazy">
+</a>
+<figcaption>그림 2. 물금·매리 구간의 연구 대상 수역과 분석 영역. (a) 현재 채수지점을 중심으로 설정한 20 km × 20 km 분석 영역과 과거·현재 채수지점의 좌표 기반 배치 개요도. (b) Figure 1(b)를 재구성한 채수지점 주변 확대도. 본 연구의 대상 수역은 분석 영역 내 낙동강 본류 수면으로 정의하며, 파란선은 본류의 위치를 나타낸다.</figcaption>
+</figure>
+
+### 4.2 현장 클로로필-a 관측자료
+
+현장자료는 물금·매리 지점의 클로로필-a 관측자료를 사용하였으며, 물환경정보시스템의 조류경보제 측정결과와 낙동강유역환경청에서 공개한 「낙동강 조류경보제 운영 결과」를 통해 확보하였다. 자료의 사용 기간은 2021년부터 2026년 9월까지이며, 다만 2025년의 8월 관측값의 경우 채수 지점 변경 과도기임을 고려하여 제외하였다. 클로로필-a 농도의 단위는 mg/m³이다.
+
+### 4.3 Sentinel-2 위성자료
+
+현장 관측자료와 비교하고 수역의 공간적 분포를 파악하기 위해 Google Earth Engine에서 제공하는 Sentinel-2 Level-2A 지표반사도 자료를 사용하였다. 사용 컬렉션 ID는 ‘COPERNICUS/S2_SR_HARMONIZED’이며, 대기보정이 적용된 자료이다. Sentinel-2의 기본 재방문 주기는 약 5일이나, 구름 등의 영향으로 실제 분석에 사용할 수 있는 영상의 확보 간격은 달라질 수 있다(Google, n.d.-a).
+
+세부 연구목적 1의 영상 조회기간은 현장자료의 사용 기간과 동일한 2021년부터 2026년 9월까지로 설정하였다. 세부 연구목적 2·3에서는 녹조 발생이 활발한 시기의 공간적 분포를 평가하기 위해 2026년 5월부터 9월까지의 자료를 대상으로 하였다.
+
+NDCI 산출에는 적색 영역의 B4 밴드와 적색경계 영역의 B5 밴드를 사용하였으며, 각각의 공간해상도는 10 m와 20 m이다. 또한 수면과 구름 등의 분류정보를 제공하는 20 m 해상도의 SCL 밴드를 활용하였다(Google, n.d.-a).
+
+### 4.4 평가 변수와 클로로필-a의 사용 이유
+
+클로로필-a(Chlorophyll-a, Chl-a)는 남조류를 포함한 식물플랑크톤의 광합성에 관여하는 주요 색소로, 수중 농도를 통해 조류 생물량을 간접적으로 파악할 수 있어 조류량의 대리 지표로 활용된다(U.S. EPA, 2025). 이에 본 연구에서는 Chl-a 농도를 채수지점과 주변 수역의 조류 분포를 비교하기 위한 평가 변수로 선정하였다.
+
+위성자료에서 Chl-a 농도를 추정하기 위한 지표로는 정규화 클로로필 지수(Normalized Difference Chlorophyll Index, NDCI)를 사용한다. NDCI는 적색과 적색경계 파장대의 반사도 차이를 이용하여 탁도가 높고 식물플랑크톤 생산성이 높은 수역의 Chl-a 농도를 원격으로 추정하기 위해 제안된 분광지표이다(Mishra and Mishra, 2012). 본 연구에서 사용하는 Sentinel-2 기반 NDCI는 B4와 B5 밴드의 반사도를 이용하여 다음과 같이 정의한다(USGS, n.d.).
+
+<div class="report-equation">
+\[
+\mathrm{NDCI} = \frac{\rho(B5)-\rho(B4)}{\rho(B5)+\rho(B4)}
+\]
+</div>
+
+- ρ(B4): Sentinel-2 적색 밴드 B4의 지표반사도(무차원)
+- ρ(B5): Sentinel-2 적색경계 밴드 B5의 지표반사도(무차원)
+
+NDCI는 무차원 지표로 Chl-a 농도 자체를 의미하지 않는다. 따라서 본 연구에서는 회귀식을 적용하여 NDCI를 Chl-a 추정 농도로 환산하고, 이를 채수지점과 주변 수역의 공간 비교에 사용한다.
+
+다만 조류의 종 구성과 생리 상태 등에 따라 색소 함량과 독소 생성량이 달라지므로, Chl-a 농도만으로 유해남조류 세포수나 독소 농도를 직접 판단할 수는 없다(Health Canada, 2022).
 
 ## 5. 방법 {#method}
 
-### 5.1 기초 탐색
+### 5.1 전체 연구 절차
 
-작성 예정
+본 연구는 Sentinel-2 NDCI와 현장 클로로필-a(Chl-a) 농도의 관계 확인, 과거·현재 채수지점의 공간적 대표 범위 산출, 과거·현재 채수지점의 대표 범위 비교의 순서로 수행한다.
 
-### 5.2 세부목적 1의 분석: 작성 예정
+먼저 2021년부터 2026년 9월까지의 현장 Chl-a 자료와 Sentinel-2 영상을 전처리하고, 현장 채수일과 해당 시기의 채수지점 좌표에 대응하는 NDCI를 추출한다. 이를 이용하여 두 변수 간 상관관계를 확인하고, Chl-a 농도 추정을 위한 회귀식을 도출한다. 공간적 대표성 평가에는 분석 시기와 계절적 조건을 맞추기 위해 각 연도의 5~9월 자료를 통합하여 도출한 회귀식을 사용한다.
 
+다음으로 2026년 5월부터 9월까지의 위성영상에 회귀식을 적용하여 분석 영역 내 유효 수면 픽셀의 Chl-a 농도를 추정한다. 현재 채수지점을 기준으로 날짜별 절대 농도 차이 지도와 상대 농도 차이 지도를 작성하고, 절대 농도 차이가 5 mg/m³ 이내인 영역을 대표 범위로 산출한다. 또한 전체 수역의 농도 분포에서 채수지점의 백분위 위치를 제시하고, 날짜별 MAE와 Bias로 수역 전체와의 농도 차이를 요약한다.
 
+이후 동일한 위성영상과 분석 영역에서 과거 채수지점을 기준으로 같은 절차를 수행한다. 두 지점의 날짜별 대표 면적·비율, 상·하류 및 좌·우안 방향별 대표 거리, 대표 범위의 확대·축소와 사각지대 변화를 비교하여 Chl-a 기반 공간적 대표성 측면에서 채수지점 변경의 적절성을 평가한다.
 
+### 5.2 자료 전처리와 품질관리
 
-### 5.3 세부목적 2의 분석: 작성 예정
+위성영상은 자동 선별과 육안 검토의 두 단계로 선별한다. 먼저 현재 채수지점을 중심으로 설정한 20 km × 20 km 정사각형 분석 영역 내 구름 면적 비율이 80% 미만이고, 채수지점에서 유효한 수면 관측값을 확보할 수 있는 영상을 1차 선정한다. 구름 영역은 SCL의 중간 확률 구름(8), 높은 확률 구름(9), 권운(10)으로 정의하며, 구름 면적 비율은 해당 영역의 구름 면적을 육지와 수면을 포함한 분석 영역 전체 면적으로 나누어 산출한다(Google, n.d.-a). 채수지점의 관측 가능 여부는 수면 마스크와 품질 조건을 적용한 후에도 해당 위치의 B4·B5 반사도가 유효하여 NDCI를 산출할 수 있는지를 기준으로 판단한다.
 
+1차 선정된 영상은 채수지점과 분석 대상 수역에 남아 있는 구름, 구름 그림자, 연무 및 강한 수면 반사 등 관측을 방해하는 요소를 육안으로 검토하여 최종 선정한다. 세부 연구목적 2·3에는 과거·현재 채수지점이 모두 관측 가능한 동일한 영상을 사용한다.
 
+밴드 간 공간해상도 차이를 조정하고 날짜별 영상을 동일한 위치에서 비교하기 위해 분석 격자를 20 m × 20 m로 통일한다. 공통 격자는 기준 영상의 B5 밴드 투영정보와 격자 위치를 기준으로 설정한다. 10 m 해상도의 B4 밴드는 각 20 m 격자와 중첩되는 면적에 따라 반사도를 가중평균하여 집계하며, B5 밴드는 20 m 해상도를 유지하면서 공통 격자에 맞춘다. SCL 밴드도 동일한 격자에 맞추되, 격자 변환이 필요한 경우 분류번호가 보존되도록 최근린 재표본화 방식을 적용한다(Google, n.d.-b). B4·B5의 저장값에는 0.0001을 곱하여 지표반사도로 변환한다(Google, n.d.-a).
 
-### 5.4 세부목적 3의 분석: 작성 예정
+최종 선정된 영상에는 SCL 기반의 픽셀 마스킹을 적용한다. 구름 그림자(3), 중간 확률 구름(8), 높은 확률 구름(9), 권운(10)에 해당하는 픽셀과 자료 없음(0), 포화·불량 픽셀(1), 눈·얼음(11)을 제외한다. 수면 영역은 각 영상에서 SCL의 수면 분류(6)에 해당하는 픽셀로 설정하며, 유효한 수면 픽셀에 한하여 NDCI를 산출한다(Google, n.d.-a).
 
+구름 등으로 유효한 관측값을 확보하지 못한 픽셀은 결측으로 처리하며, 공간 및 시간 보간은 적용하지 않는다. 세부 연구목적 1에서는 동일한 날짜에 현장 Chl-a 농도와 위성 NDCI가 모두 유효한 자료쌍만 사용한다. 세부 연구목적 2·3에서는 과거 또는 현재 채수지점 중 어느 한 지점이라도 예측 Chl-a 농도가 0 이하로 산출되면 해당 날짜의 영상을 두 목적의 분석에서 모두 제외한다. 채수지점 이외의 수면 픽셀에서 예측 농도가 0 이하로 산출되는 경우에는 해당 픽셀을 결측으로 처리한다. 이에 따라 과거·현재 채수지점의 지도와 통계량은 동일한 날짜와 동일한 유효 수면 픽셀 집합을 대상으로 산출하며, 날짜별 유효 수면 면적을 함께 제시하여 실제 평가에 사용된 관측 범위를 밝힌다.
 
-### 5.5 불확실성 및 재현성
+### 5.3 세부 연구목적 1의 분석: Sentinel-2 NDCI와 현장 클로로필-a 농도의 관계 확인
 
+NDCI는 4.4에 제시한 식으로 산출한다. 채수지점의 NDCI는 해당 관측 시기에 적용되는 채수지점 좌표를 중심으로 반경 20 m의 원형 버퍼를 설정하고, 버퍼 내 품질관리 기준을 충족한 수면 픽셀의 값을 평균하여 추출한다.
+
+현장 채수일과 위성 촬영일이 일치하고 품질관리 기준을 충족한 자료를 이용하여 현장 Chl-a 농도와 NDCI의 자료쌍을 구성한다. NDCI를 가로축, 현장 Chl-a 농도를 세로축으로 하는 산점도를 작성하고, Pearson 상관계수(r)와 p값을 산출하여 두 변수 사이의 선형 관계를 확인한다. 또한 Spearman 순위상관계수(ρ)를 산출하여 순위에 기반한 관계를 함께 확인한다. 분석 자료는 전체기간 자료, 2021~2026년 각 연도의 5~9월 자료를 통합한 자료군, 각 연도의 5~10월 자료를 통합한 자료군으로 구분하며, 연도별 통계량도 별도로 산출한다. 각 분석에는 유효 자료쌍의 수(n)를 함께 제시하며, 자료쌍이 3개 이상이고 두 변수 모두에서 서로 다른 값이 2개 이상 확보되는 경우에 상관계수와 회귀계수를 계산한다.
+
+NDCI를 설명변수, 현장 Chl-a 농도를 반응변수로 하는 단순선형회귀모형을 설정하고, 최소제곱법으로 잔차제곱합이 최소가 되도록 기울기와 절편을 추정한다. 전체기간 및 계절별 자료군의 회귀식을 각각 산출한다. 세부 연구목적 2·3의 평가 기간이 2026년 5~9월이므로, 두 목적에는 2021~2026년 각 연도의 5~9월에 해당하는 유효 자료쌍을 통합하여 도출한 하나의 회귀식을 공통으로 적용한다. 전체기간과 5~10월 자료군의 회귀식은 자료의 계절적 범위에 따른 관계를 비교하기 위한 결과로 제시한다. 회귀식의 형태는 다음과 같다.
+
+<div class="report-equation">
+\[
+\text{추정 Chl-a 농도} = a\times\mathrm{NDCI}+b
+\]
+</div>
+
+- a: 회귀식의 기울기(mg/m³)
+- b: 회귀식의 절편(mg/m³)
+- NDCI: 정규화 클로로필 지수(무차원)
+- 추정 Chl-a 농도: 회귀식으로 추정한 클로로필-a 농도(mg/m³)
+
+도출한 회귀식의 적합도는 결정계수(R²)와 평균제곱근오차(RMSE)를 이용하여 평가한다. 두 지표는 회귀식 구축에 사용한 자료를 대상으로 산출하며, 별도의 검증자료를 사용하지 않았으므로 구축자료에 대한 적합도로 해석한다.
+
+### 5.4 세부 연구목적 2의 분석: 현재 채수지점의 공간적 대표 범위 산출
+
+2026년 5월부터 9월까지의 Sentinel-2 영상을 이용하여 현재 채수지점의 공간적 대표 범위를 평가한다. 현장 채수일과 관계없이 영상 품질관리 기준을 충족한 위성 관측일을 대상으로 하며, 평가 범위는 4.1에서 설정한 분석 영역 내 유효 수면 픽셀로 한정한다. 각 날짜에 선정된 수면 픽셀의 NDCI에 5.3에서 제시한 5~9월 자료군의 회귀식을 적용하여 Chl-a 농도를 추정한다. 현재 채수지점의 기준 농도는 해당 좌표가 포함된 단일 픽셀의 위성 추정 농도로 설정한다.
+
+먼저 각 날짜의 유효 수면 픽셀을 대상으로 Chl-a 농도의 제1사분위수, 중앙값 및 제3사분위수를 산출하고, 현재 채수지점의 추정 농도를 함께 제시한다. 또한 채수지점의 농도가 해당 날짜의 수역 전체 농도 분포에서 차지하는 백분위 순위를 계산한다. 이 값은 채수지점의 상대적 농도 위치를 설명하는 보조 정보로 제시하며, 대표 범위를 구분하는 판정 기준으로 사용하지 않는다. 여기서 수역 전체는 분석 영역 내에서 해당 날짜에 실제로 평가할 수 있는 유효 수면을 의미한다.
+
+<div class="report-equation">
+\[
+P_s(t) = \frac{N_{\text{낮음}}(t)+0.5\times N_{\text{동일}}(t)}{N(t)}\times100
+\]
+</div>
+
+- Pₛ(t): 날짜 t의 채수지점 농도 백분위 순위(%)
+- N낮음(t): 날짜 t에 채수지점보다 추정 농도가 낮은 수면 픽셀 수(개)
+- N동일(t): 날짜 t에 채수지점과 추정 농도가 같은 수면 픽셀 수(개)
+- N(t): 날짜 t의 전체 유효 수면 픽셀 수(개)
+- t: 위성 관측 날짜
+
+이어서 현재 채수지점을 기준으로 날짜별 절대 농도 차이 지도와 상대 농도 차이 지도를 각각 작성한다. 각 수면 픽셀과 채수지점의 위성 추정 농도를 비교하여 절대 농도 차이 A(x,t)와 상대 농도 차이 R(x,t)를 다음과 같이 산출한다.
+
+<div class="report-equation">
+\[
+A(x,t) = \left|C(x,t)-C_s(t)\right|
+\]
+</div>
+
+<div class="report-equation">
+\[
+R(x,t) = \frac{C(x,t)-C_s(t)}{C_s(t)}\times100
+\]
+</div>
+
+- C(x,t): 날짜 t의 수면 픽셀 x에서 추정한 Chl-a 농도(mg/m³)
+- Cₛ(t): 날짜 t의 현재 채수지점 기준 픽셀에서 추정한 Chl-a 농도(mg/m³)
+- A(x,t): 채수지점과 수면 픽셀 사이의 절대 농도 차이(mg/m³)
+- R(x,t): 채수지점과 수면 픽셀 사이의 상대 농도 차이(%)
+- x: 수면 픽셀의 위치
+
+상대 농도 차이가 양수이면 주변 픽셀의 농도가 채수지점보다 높고, 음수이면 낮음을 의미한다. 절대 농도 차이는 항상 0 이상이며, 차이의 방향은 상대 농도 차이 지도와 Bias를 통해 확인한다.
+
+날짜별 절대·상대 농도 차이는 각각 표 2와 표 3의 범례에 따라 지도화하며, 동일한 종류의 지도에는 날짜와 기준 채수지점에 관계없이 같은 구간과 색상을 적용한다. 결측·평가 불가 영역은 회색으로 표시한다. 상대 농도 차이 지도의 구간은 분포를 시각화하기 위한 구분이며, 대표 범위는 아래의 절대 농도 차이 기준으로 판정한다.
+
+<div class="report-table-wrap">
+<table class="report-table ">
+<caption>표 2. 날짜별 절대 클로로필-a 농도 차이 지도의 범례</caption>
+<thead><tr><th scope="col">절대 농도 차이 A(x,t) (mg/m³)</th><th scope="col">대표성 판정</th><th scope="col">색상</th></tr></thead>
+<tbody>
+<tr><td>0 ≤ A ≤ 5</td><td>대표 영역</td><td><span class="legend-swatch" style="background:#ffffff"></span>흰색</td></tr>
+<tr><td>A &gt; 5</td><td>비대표 영역</td><td><span class="legend-swatch" style="background:#b2182b"></span>진한 빨강</td></tr>
+<tr><td>결측·평가 불가</td><td>판정 제외</td><td><span class="legend-swatch" style="background:#bdbdbd"></span>회색</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="report-table-wrap">
+<table class="report-table ">
+<caption>표 3. 날짜별 상대 클로로필-a 농도 차이 지도의 범례</caption>
+<thead><tr><th scope="col">상대 농도 차이 R(x,t) (%)</th><th scope="col">색상</th></tr></thead>
+<tbody>
+<tr><td>R &lt; −30</td><td><span class="legend-swatch" style="background:#2166ac"></span>진한 파랑</td></tr>
+<tr><td>−30 ≤ R &lt; −20</td><td><span class="legend-swatch" style="background:#4393c3"></span>파랑</td></tr>
+<tr><td>−20 ≤ R &lt; −10</td><td><span class="legend-swatch" style="background:#92c5de"></span>연한 파랑</td></tr>
+<tr><td>−10 ≤ R ≤ 10</td><td><span class="legend-swatch" style="background:#ffffff"></span>흰색</td></tr>
+<tr><td>10 &lt; R ≤ 20</td><td><span class="legend-swatch" style="background:#fddbc7"></span>연한 주황</td></tr>
+<tr><td>20 &lt; R ≤ 30</td><td><span class="legend-swatch" style="background:#ef8a62"></span>주황</td></tr>
+<tr><td>R &gt; 30</td><td><span class="legend-swatch" style="background:#b2182b"></span>진한 빨강</td></tr>
+<tr><td>결측·평가 불가</td><td><span class="legend-swatch" style="background:#bdbdbd"></span>회색</td></tr>
+</tbody>
+</table>
+</div>
+
+대표성 평가는 날짜별 절대 농도 차이에 단일 허용차이 δ = 5 mg/m³를 적용하여 수행한다. A(x,t) ≤ 5 mg/m³를 만족하는 픽셀을 해당 날짜에 채수지점과 농도가 유사한 대표 영역으로 정의하고, 이를 초과하는 유효 수면 픽셀은 비대표 영역으로 구분한다.
+
+허용차이의 선정에는 남조류의 세포당 Chl-a 함량에 관한 배양실험 결과와 조류경보제의 세포수 기준을 참고하였다. Peng et al.(2018)은 Microcystis aeruginosa FACHB-905의 배양실험에서 세포당 Chl-a 함량의 최댓값으로 0.39 pg/cell을 보고하였다. 이 함량을 가정하여 10,000 cells/mL를 환산하면 Chl-a 농도는 약 3.9 mg/m³에 해당한다. 또한 2025년 조류경보제 운영 매뉴얼에서 상수원 구간의 경계 단계 하한은 남조류 세포수 10,000 cells/mL이며, 2회 연속 측정 결과를 기준으로 발령한다(환경부·국립환경과학원, 2025). 본 연구는 이러한 농도 규모를 참고하여 5 mg/m³를 공간적 농도 유사성 비교를 위한 단일 허용차이로 설정하였다. 다만 세포당 Chl-a 함량은 종과 배양·환경 조건에 따라 달라지므로, 이 값은 연구에서 설정한 탐색적 평가 기준으로 사용하며 조류경보 발령 기준이나 보편적으로 검증된 대표성 기준으로 해석하지 않는다.
+
+날짜별 대표 면적은 절대 농도 차이가 5 mg/m³ 이내인 픽셀의 면적을 합산하여 산출한다. 대표 비율은 대표 면적을 해당 날짜의 전체 유효 수면 면적으로 나누어 계산한다. 따라서 대표 비율의 분모에는 분석 영역의 육지나 구름 등으로 관측하지 못한 수면을 포함하지 않으며, 결과에는 평가에 사용한 유효 수면 면적을 함께 제시한다.
+
+<div class="report-equation">
+\[
+\text{대표 비율}(\%) = \frac{\text{대표 면적}}{\text{전체 유효 수면 면적}}\times100
+\]
+</div>
+
+방향별 대표 거리는 하천의 흐름과 단면 방향을 구분하여 산출한다. 상·하류 방향은 하천 중심선을 따라 채수지점의 위치를 기준으로 구분하고, 채수지점에서부터 농도 차이 기준을 연속적으로 만족하는 구간의 길이를 하천을 따라 측정한다. 좌·우안 방향은 하류를 바라보는 방향을 기준으로 구분하고, 채수지점을 통과하는 하천 횡단면에서 기준을 연속적으로 만족하는 구간의 길이를 측정한다. 떨어져 있는 유사 농도 영역을 채수지점과 연속된 대표 거리로 간주하지 않으며, 분석 영역의 경계에서 평가가 끝나는 경우에는 해당 거리까지만 제시한다.
+
+각 날짜의 수역 전체와 채수지점 사이의 농도 차이는 MAE와 Bias로 요약한다. 두 지표는 해당 날짜의 동일한 유효 수면 픽셀 집합에 대해 산출하며, 단위는 mg/m³이다.
+
+<div class="report-equation">
+\[
+\mathrm{MAE}_s(t) = \frac{1}{N(t)}\sum_x \left|C(x,t)-C_s(t)\right|
+\]
+</div>
+
+<div class="report-equation">
+\[
+\mathrm{Bias}_s(t) = \frac{1}{N(t)}\sum_x \left[C(x,t)-C_s(t)\right]
+\]
+</div>
+
+- MAEₛ(t): 날짜 t의 수역 전체와 채수지점 사이의 평균 절대 농도 차이(mg/m³)
+- Biasₛ(t): 날짜 t의 수역 전체와 채수지점 사이의 평균 농도 차이(부호 포함, mg/m³)
+- Σₓ: 날짜 t의 전체 유효 수면 픽셀에 대한 합산
+- N(t): 날짜 t의 전체 유효 수면 픽셀 수(개)
+
+Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 농도를 보이고, 음수이면 낮은 농도를 보임을 의미한다. 서로 반대 방향의 차이가 상쇄될 수 있으므로 Bias는 MAE와 함께 해석한다. 두 지표는 위성 추정 농도 사이의 공간적 차이를 요약하는 값으로 사용한다.
+
+### 5.5 세부 연구목적 3의 분석: 과거·현재 채수지점의 공간적 대표 범위 비교
+
+과거 채수지점의 대표 범위는 세부 연구목적 2와 동일한 방법으로 산출한다. 분석 영역은 현재 채수지점을 중심으로 설정한 20 km × 20 km 구역으로 유지하며, 과거 채수지점 중심으로 이동하지 않는다. 두 지점에는 동일한 2026년 5~9월 위성영상, 5.3의 5~9월 자료군 회귀식, 분석 격자 및 유효 수면 픽셀 집합을 적용하고, 기준 농도를 추출하는 위치만 과거 채수지점으로 변경한다. 따라서 본 비교는 과거의 현장 관측값과 현재의 위성 관측값을 비교하는 방식이 아니라, 동일한 2026년 관측일에 두 채수 위치의 대표성을 비교하는 방식이다.
+
+과거 채수지점 좌표가 포함된 단일 픽셀의 위성 추정 Chl-a 농도를 기준으로 날짜별 절대·상대 농도 차이 지도를 작성하고, 현재 채수지점과 동일한 5 mg/m³의 허용차이를 적용하여 대표 영역을 산출한다. 또한 전체 수역의 제1사분위수·중앙값·제3사분위수와 과거 채수지점의 농도 및 백분위 순위를 제시한다. 날짜별 MAE·Bias도 세부 연구목적 2와 동일하게 계산하며, 지도 범례와 색상을 통일하여 두 지점의 결과를 비교한다.
+
+각 날짜에 5 mg/m³의 동일한 허용차이를 적용한 과거·현재 채수지점의 대표 면적과 대표 비율을 비교한다. 변화량은 현재 지점의 값에서 과거 지점의 값을 뺀 값으로 정의하며, 양수이면 현재 지점의 대표 면적 또는 대표 비율이 더 크고, 음수이면 더 작음을 의미한다. 대표 비율 변화는 퍼센트포인트(%p)로 제시한다. 두 지점의 MAE를 함께 비교하여 수역 전체와의 평균 농도 차이를 확인하고, Bias를 통해 주변 수역에 비해 어느 방향으로 농도 차이가 나타나는지 살펴본다. 백분위 순위는 두 지점의 상대적인 농도 위치를 설명하는 값으로만 제시한다.
+
+<div class="report-equation">
+\[
+\text{대표 면적 변화} = \text{현재 지점 대표 면적}-\text{과거 지점 대표 면적}
+\]
+</div>
+
+<div class="report-equation">
+\[
+\text{대표 비율 변화}(\%p) = \text{현재 지점 대표 비율}(\%)-\text{과거 지점 대표 비율}(\%)
+\]
+</div>
+
+방향별로는 상·하류와 좌·우안의 연속 대표 거리를 비교하고, 각 방향에서 현재 지점의 거리에서 과거 지점의 거리를 뺀 변화량을 제시한다. 두 지점의 기준 횡단면이 서로 다른 위치에 놓인다는 점을 고려하여, 좌·우안 거리는 각 지점 주변 하천 단면에서의 대표 범위를 나타내는 값으로 해석한다. 거리 비교는 대표 영역 지도를 함께 확인하여 하천의 굴곡과 폭, 분석 영역 경계의 영향을 고려한다.
+
+대표 범위의 공간적 변화는 동일 날짜에 5 mg/m³의 허용차이를 적용하여 유효 수면 픽셀을 네 가지로 구분해 평가한다. 구분은 두 지점 모두에서 대표되는 영역, 현재 지점에서만 대표되는 영역, 과거 지점에서만 대표되는 영역, 두 지점 모두에서 대표되지 않는 영역이다. 현재 지점에서만 대표되는 영역은 채수 위치 변경에 따라 대표 범위가 확보된 부분으로, 과거 지점에서만 대표되는 영역은 대표 범위가 축소된 부분으로 해석한다. 두 지점 모두에서 대표되지 않는 영역은 5 mg/m³ 기준의 공통 사각지대로 제시한다. 이때 사각지대는 기준 농도와의 차이가 허용차이를 초과하는 관측 가능한 수면을 의미하며, 구름 등으로 평가하지 못한 영역과 구분한다.
+
+이를 종합하여 채수지점 변경에 따른 대표 면적과 방향별 거리의 확대·축소, 농도 차이의 방향 및 사각지대의 위치 변화를 날짜별로 확인한다. 변경의 적절성은 분석 기간의 위성 추정 Chl-a 분포와 본 연구에서 설정한 허용차이에 근거하여 해석한다.
+
+</div>
 
 ## 6. 결과 {#results}
 
@@ -240,3 +482,17 @@ Simis, S. G. H., Peters, S. W. M., & Gons, H. J. (2005). Remote sensing of the c
 Toming, K., Kutser, T., Laas, A., Sepp, M., Paavel, B., & Nõges, T. (2016). First experiences in mapping lake water quality parameters with Sentinel-2 MSI imagery. *Remote Sensing, 8*(8), 640. https://doi.org/10.3390/rs8080640
 
 World Health Organization. (2020). *Cyanobacterial toxins: Microcystins* (WHO/HEP/ECH/WSH/2020.6). World Health Organization.
+
+환경부·국립환경과학원. (2020). *조류경보제 운영 매뉴얼(2020).* [원문](https://www.water.or.kr/upload/board/2026/04/20260414110705_1.pdf)
+
+Google. (n.d.-a). *Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A (SR).* Google Earth Engine Data Catalog. [자료 설명](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED) (접속일: 2026. 11. 22.).
+
+Google. (n.d.-b). *Resample and reduce resolution.* Google Earth Engine Documentation. [문서](https://developers.google.com/earth-engine/guides/resample) (접속일: 2026. 11. 22.).
+
+Health Canada. (2022). *Guidelines for Canadian recreational water quality: Cyanobacteria and their toxins.* Government of Canada. [원문](https://www.canada.ca/en/health-canada/services/publications/healthy-living/guidance-canadian-recreational-water-quality-cyanobacteria-toxins.html) (접속일: 2026. 11. 20.).
+
+Peng, G., Wilhelm, S. W., Lin, S., & Wang, X. (2018). Response of Microcystis aeruginosa FACHB-905 to different nutrient ratios and changes in phosphorus chemistry. *Journal of Oceanology and Limnology, 36*(4), 1040–1052. https://doi.org/10.1007/s00343-018-7065-1
+
+U.S. Environmental Protection Agency (U.S. EPA). (2025). *Indicators: Chlorophyll a.* [자료 설명](https://www.epa.gov/national-aquatic-resource-surveys/indicators-chlorophyll) (접속일: 2026. 11. 20.).
+
+U.S. Geological Survey (USGS). (n.d.). *REmote Aquatic Chlorophyll-a Tracker (REACT).* [웹페이지](https://webapps.usgs.gov/react/) (접속일: 2026. 11. 20.).
