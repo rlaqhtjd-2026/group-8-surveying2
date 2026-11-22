@@ -5,6 +5,74 @@
 <title>{{ page.title | strip_html | escape }} · 위성영상 프로젝트</title>
 <meta name="description" content="위성영상 프로젝트의 연구 질문, 방법, 결과와 재현 가능한 코드를 함께 읽는 학생용 웹보고서입니다.">
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v=fit-table-5">
+<!-- 4·5장 하위 목차: 본문 제목에서 자동 생성 -->
+<style>
+  .sidebar .report-subnav {
+    display: grid;
+    gap: 2px;
+    margin: 0 0 6px 8px;
+    padding-left: 12px;
+    border-left: 1px solid var(--line);
+  }
+  .sidebar .report-subnav a {
+    padding: 5px 0;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  @media (min-width: 851px) {
+    .sidebar {
+      max-height: calc(100vh - 140px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+  }
+  @media (max-width: 850px) {
+    .sidebar .report-subnav {
+      flex-basis: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+  }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const nav = document.querySelector('.sidebar nav');
+  const article = document.querySelector('#report article');
+  if (!nav || !article) return;
+
+  const shortLabels = {
+    '5.3': '5.3 목적 1: NDCI와 현장 농도',
+    '5.4': '5.4 목적 2: 현재 지점 대표 범위',
+    '5.5': '5.5 목적 3: 과거·현재 지점 비교'
+  };
+
+  [['4', 'materials'], ['5', 'method']].forEach(function (item) {
+    const chapter = item[0];
+    const parentLink = nav.querySelector('a[href="#' + item[1] + '"]');
+    if (!parentLink || nav.querySelector('[data-chapter="' + chapter + '"]')) return;
+
+    const group = document.createElement('div');
+    group.className = 'report-subnav';
+    group.dataset.chapter = chapter;
+
+    article.querySelectorAll('h3').forEach(function (heading) {
+      const title = heading.textContent.trim().replace(/\s+/g, ' ');
+      const match = title.match(/^([45])\.(\d+)(?:\s|$)/);
+      if (!match || match[1] !== chapter) return;
+
+      const number = match[1] + '.' + match[2];
+      if (!heading.id) heading.id = 'section-' + number.replace('.', '-');
+
+      const link = document.createElement('a');
+      link.href = '#' + encodeURIComponent(heading.id);
+      link.textContent = shortLabels[number] || title;
+      link.title = title;
+      group.appendChild(link);
+    });
+
+    if (group.childElementCount) parentLink.after(group);
+  });
+});
+</script>
 </head>
 <body>
 <a class="skip" href="#report">본문으로 이동</a>
