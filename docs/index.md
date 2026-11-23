@@ -468,7 +468,7 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
     </a>
   </div>
   <figcaption>
-    <strong>그림 6. 채수지점 기준 클로로필-a 편차 지도의 시계열 변화.</strong>
+    <strong>그림 6. 현재 채수지점 기준 클로로필-a 편차 지도의 시계열 변화</strong>
   </figcaption>
 </figure>
 
@@ -482,7 +482,7 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
       loading="lazy">
   </a>
   <figcaption>
-    <strong>그림 7. 현재 채수지점 기준 절대편차 구간별 면적 비율.</strong>
+    <strong>그림 7. 현재 채수지점 기준 절대편차 구간별 면적 비율</strong>
   </figcaption>
 </figure>
 
@@ -508,13 +508,47 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
       loading="lazy">
   </a>
   <figcaption>
-    <strong>그림 9. 현재 채수지점 기준 대표면적과 대표비율의 시계열 변화.</strong>
+    <strong>그림 9. 현재 채수지점 기준 대표면적과 대표비율의 시계열 변화</strong>
   </figcaption>
 </figure>
 
 
 ### 6.4 세부목적 3 · 작성 예정
 
+<figure class="report-figure" id="figure-10">
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; margin-bottom:1rem;">
+    <a href="{{ '/figures/figure10.Deviationmap_past_0508.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0508.png' | relative_url }}" alt="2026년 5월 8일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure10.Deviationmap_past_0513.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0513.png' | relative_url }}" alt="2026년 5월 13일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure10.Deviationmap_past_0515.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0515.png' | relative_url }}" alt="2026년 5월 15일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure10.Deviationmap_past_0518.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0518.png' | relative_url }}" alt="2026년 5월 18일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure10.Deviationmap_past_0612.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0612.png' | relative_url }}" alt="2026년 6월 12일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure10.Deviationmap_past_0801.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0801.png' | relative_url }}" alt="2026년 8월 1일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure10.Deviationmap_past_0806.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0806.png' | relative_url }}" alt="2026년 8월 6일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure10.Deviationmap_past_0912.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0912.png' | relative_url }}" alt="2026년 9월 12일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure10.Deviationmap_past_0930.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure10.Deviationmap_past_0930.png' | relative_url }}" alt="2026년 9월 30일 과거 채수지점 기준 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+  </div>
+  <figcaption>
+    <strong>그림 10. 과거 채수지점 기준 클로로필-a 편차 지도의 시계열 변화</strong>
+  </figcaption>
+</figure>
 
 
 ## 7. 토의 {#discussion}
