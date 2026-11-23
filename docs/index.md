@@ -499,6 +499,19 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
   </figcaption>
 </figure>
 
+<figure class="report-figure" id="figure-9">
+  <a href="{{ '/figures/figure9.RepresentativeArea_Ratio_current.png' | relative_url }}"
+     target="_blank" rel="noopener">
+    <img
+      src="{{ '/figures/figure9.RepresentativeArea_Ratio_current.png' | relative_url }}"
+      alt="현재 채수지점 기준 대표면적과 대표비율의 시계열 변화"
+      loading="lazy">
+  </a>
+  <figcaption>
+    <strong>그림 9. 현재 채수지점 기준 대표면적과 대표비율의 시계열 변화.</strong>
+  </figcaption>
+</figure>
+
 
 ### 6.4 세부목적 3 · 작성 예정
 
