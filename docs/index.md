@@ -437,67 +437,6 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 
 ### 6.3 세부목적 2 · 작성 예정
 
-<figure class="report-figure" id="figure-6">
-  <div class="figure-grid figure-grid-3x3">
-    <a href="{{ '/figures/figure6.Deviationmap_0508.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0508.png' | relative_url }}"
-           alt="2026년 5월 8일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0513.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0513.png' | relative_url }}"
-           alt="2026년 5월 13일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0518.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0518.png' | relative_url }}"
-           alt="2026년 5월 18일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0523.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0523.png' | relative_url }}"
-           alt="2026년 5월 23일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0528.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0528.png' | relative_url }}"
-           alt="2026년 5월 28일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0602.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0602.png' | relative_url }}"
-           alt="2026년 6월 2일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0607.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0607.png' | relative_url }}"
-           alt="2026년 6월 7일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0612.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0612.png' | relative_url }}"
-           alt="2026년 6월 12일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0617.png' | relative_url }}"
-       target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0617.png' | relative_url }}"
-           alt="2026년 6월 17일 채수지점 기준 클로로필-a 편차 지도"
-           loading="lazy">
-    </a>
-  </div>
-  <figcaption>
-    <strong>그림 6. 채수지점 기준 클로로필-a 편차 지도의 시계열 변화.
-  </figcaption>
-</figure>
 
 ### 6.4 세부목적 3 · 작성 예정
 
