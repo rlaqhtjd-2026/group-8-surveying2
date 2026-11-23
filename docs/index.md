@@ -550,6 +550,58 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
   </figcaption>
 </figure>
 
+<figure class="report-figure" id="figure-11">
+  <a href="{{ '/figures/figure11.AbsoluteDeviation_AreaPercentage_past.png' | relative_url }}"
+     target="_blank" rel="noopener">
+    <img
+      src="{{ '/figures/figure11.AbsoluteDeviation_AreaPercentage_past.png' | relative_url }}"
+      alt="과거 채수지점 기준 절대편차 구간별 면적 비율"
+      loading="lazy">
+  </a>
+  <figcaption>
+    <strong>그림 11. 과거 채수지점 기준 절대편차 구간별 면적 비율</strong>
+  </figcaption>
+</figure>
+
+<figure class="report-figure" id="figure-12">
+  <a href="{{ '/figures/figure12.MAE_Bias_past.png' | relative_url }}"
+     target="_blank" rel="noopener">
+    <img
+      src="{{ '/figures/figure12.MAE_Bias_past.png' | relative_url }}"
+      alt="과거 채수지점 기준 평균절대오차(MAE)와 평균편차(Bias)의 시계열 변화"
+      loading="lazy">
+  </a>
+  <figcaption>
+    <strong>그림 12. 과거 채수지점 기준 평균절대오차(MAE)와 평균편차(Bias)의 시계열 변화</strong>
+  </figcaption>
+</figure>
+
+<figure class="report-figure" id="figure-13">
+  <a href="{{ '/figures/figure13.RepresentativeArea_Ratio_past.png' | relative_url }}"
+     target="_blank" rel="noopener">
+    <img
+      src="{{ '/figures/figure13.RepresentativeArea_Ratio_past.png' | relative_url }}"
+      alt="과거 채수지점 기준 대표면적과 대표비율의 시계열 변화"
+      loading="lazy">
+  </a>
+  <figcaption>
+    <strong>그림 13. 과거 채수지점 기준 대표면적과 대표비율의 시계열 변화</strong>
+  </figcaption>
+</figure>
+
+<figure class="report-figure" id="figure-14">
+  <a href="{{ '/figures/figure14.RepresentativeArea_Ratio_current_minus_past.png' | relative_url }}"
+     target="_blank" rel="noopener">
+    <img
+      src="{{ '/figures/figure14.RepresentativeArea_Ratio_current_minus_past.png' | relative_url }}"
+      alt="현재·과거 채수지점 기준 대표면적과 대표비율의 차이(현재 − 과거)"
+      loading="lazy">
+  </a>
+  <figcaption>
+    <strong>그림 14. 현재·과거 채수지점 기준 대표면적과 대표비율의 차이(현재 − 과거)</strong>
+  </figcaption>
+</figure>
+
 
 ## 7. 토의 {#discussion}
 작성 예정
