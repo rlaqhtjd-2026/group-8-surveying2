@@ -379,7 +379,7 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 
 이를 종합하여 채수지점 변경에 따른 대표 면적과 방향별 거리의 확대·축소, 농도 차이의 방향 및 사각지대의 위치 변화를 날짜별로 확인한다. 변경의 적절성은 분석 기간의 위성 추정 Chl-a 분포와 본 연구에서 설정한 허용차이에 근거하여 해석한다.
 
-</div>
+
 
 ## 6. 결과 {#results}
 
@@ -388,6 +388,23 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 
 ### 6.2 세부목적 1 · 작성 예정
 
+2021년 1월부터 2026년 9월까지의 현장 관측 312회(2025년 8월 제외) 중 채수일과 Sentinel-2 촬영일이 일치한 날은 65일이었으며, 이 가운데 품질관리 기준을 충족한 유효 자료쌍은 32개였다(과거 채수지점 24개, 현재 채수지점 8개). 5~9월의 유효 자료쌍은 10개(과거 채수지점 7개, 현재 채수지점 3개)로, 같은 기간 현장 관측 157회의 6.4%에 해당하였다. 2025년 5~9월에는 품질관리 기준을 충족한 자료쌍이 없었다.
+
+전체기간 자료에서 NDCI와 현장 Chl-a 농도는 통계적으로 유의한 양의 상관관계를 보였다(Pearson r = 0.763, p < 0.001; Spearman ρ = 0.775, p < 0.001; 그림 4a). 5~9월 자료군의 상관계수는 Pearson r = 0.929(p < 0.001), Spearman ρ = 0.806(p = 0.005)으로 전체기간보다 상대적으로 높았다(그림 4b). 5~9월 자료군에서 Spearman ρ는 Pearson r보다 0.123 낮았다. NDCI가 −0.025~0.017 범위인 5개 자료의 Chl-a 농도는 5.6~29.6 mg/m³로, 이 구간에서는 NDCI와 Chl-a 농도의 순위가 일치하지 않는 경우가 있었다. 5~9월 자료의 Cook 거리는 0.000~0.325로 모두 4/n(0.4) 미만이었다.
+
+전체기간과 5~9월 자료군에서 도출한 회귀식은 각각 다음과 같다.
+
+<div class="report-equation"> \[ \text{추정 Chl-a 농도}_{\text{전체기간}} = 179.34\times\mathrm{NDCI}+25.68 \] </div> <div class="report-equation"> \[ \text{추정 Chl-a 농도}_{\text{5~9월}} = 191.69\times\mathrm{NDCI}+23.76 \] </div>
+
+5~9월 회귀식의 기울기와 절편의 95% 신뢰구간은 각각 129.47~253.91, 17.81~29.70 mg/m³였다. 구축자료에 대한 R²와 RMSE는 전체기간이 0.582, 12.490 mg/m³, 5~9월이 0.863, 6.917 mg/m³였다(표 4). 5~9월 회귀식의 구축자료 범위는 NDCI −0.079~0.222, 현장 Chl-a 농도 5.6~63.5 mg/m³(평균 29.6 mg/m³)였다.
+
+5~9월 자료군의 LOYO 교차검증은 자료쌍이 있는 5개 연도(2021~2024년, 2026년)를 대상으로 수행되었으며, 연도별 검증자료는 1~3개였다. 각 연도를 제외하고 도출한 회귀식의 기울기는 172.04~209.46, 절편은 22.70~24.89 mg/m³ 범위였다. 예측값을 통합하여 산출한 검증 R²는 0.822, RMSE는 7.891 mg/m³, MAE는 5.885 mg/m³, Bias는 0.020 mg/m³였다(그림 5; 표 4). 구축자료 적합도와 비교하면 R²는 0.041 낮고 RMSE는 0.974 mg/m³ 컸다. 예측오차가 가장 큰 자료는 2022년 5월 9일로, 실측 농도 5.6 mg/m³를 22.6 mg/m³로 예측하였다(오차 +17.0 mg/m³). 다음으로 2022년 8월 22일(−11.6 mg/m³)과 2026년 9월 10일(−11.0 mg/m³)의 오차가 컸다.
+
+<div class="report-table-wrap"> <table class="report-table"> <caption>표 4. Sentinel-2 NDCI와 현장 Chl-a 농도의 상관분석 및 회귀모형 검증 결과</caption> <thead><tr><th scope="col">구분</th><th scope="col">전체기간</th><th scope="col">5~9월</th><th scope="col">5~9월 LOYO 검증</th></tr></thead> <tbody> <tr><td>자료쌍 수 (n)</td><td>32</td><td>10</td><td>10 (5개 연도)</td></tr> <tr><td>과거 / 현재 채수지점</td><td>24 / 8</td><td>7 / 3</td><td>7 / 3</td></tr> <tr><td>Pearson r</td><td>0.763</td><td>0.929</td><td>–</td></tr> <tr><td>Pearson p</td><td>&lt;0.001</td><td>&lt;0.001</td><td>–</td></tr> <tr><td>Spearman ρ</td><td>0.775</td><td>0.806</td><td>–</td></tr> <tr><td>Spearman p</td><td>&lt;0.001</td><td>0.005</td><td>–</td></tr> <tr><td>기울기 a (95% CI)</td><td>179.34 (122.72~235.95)</td><td>191.69 (129.47~253.91)</td><td>172.04~209.46</td></tr> <tr><td>절편 b (95% CI, mg/m³)</td><td>25.68 (20.91~30.45)</td><td>23.76 (17.81~29.70)</td><td>22.70~24.89</td></tr> <tr><td>R²</td><td>0.582</td><td>0.863</td><td>0.822</td></tr> <tr><td>RMSE (mg/m³)</td><td>12.490</td><td>6.917</td><td>7.891</td></tr> <tr><td>MAE (mg/m³)</td><td>9.472</td><td>5.037</td><td>5.885</td></tr> <tr><td>Bias (mg/m³)</td><td>–</td><td>–</td><td>0.020</td></tr> </tbody> </table> </div>
+
+주: 전체기간과 5~9월의 R², RMSE, MAE는 회귀식 구축자료에 대한 적합도이다. LOYO 검증 통계량은 각 연도를 제외한 회귀식의 예측값을 통합하여 산출하였으며, 검증 R²는 1 − SSE/SST로 계산하였다. LOYO 열의 기울기와 절편은 연도별 제외 회귀식의 범위이며, Bias는 예측값에서 실측값을 뺀 값의 평균이다.
+
+<figure class="report-figure" id="figure-4"> <a href="{{ '/figures/figure4_ndci_chla_relationship.png' | relative_url }}" target="_blank" rel="noopener"> <img src="{{ '/figures/figure4_ndci_chla_relationship.png' | relative_url }}" alt="전체기간과 5~9월 자료군의 Sentinel-2 NDCI와 현장 Chl-a 농도 산점도 및 선형회귀선" loading="lazy"> </a> <figcaption>그림 4. Sentinel-2 NDCI와 현장 Chl-a 농도의 관계. (a) 전체기간(2021년 1월~2026년 9월, n = 32), (b) 각 연도의 5~9월 통합자료(n = 10). 점선은 각 자료군의 선형회귀선이다.</figcaption> </figure> <figure class="report-figure" id="figure-5"> <a href="{{ '/figures/figure5_loyo_validation.png' | relative_url }}" target="_blank" rel="noopener"> <img src="{{ '/figures/figure5_loyo_validation.png' | relative_url }}" alt="5~9월 자료군의 LOYO 교차검증에 따른 현장 Chl-a 농도와 예측 농도 비교" loading="lazy"> </a> <figcaption>그림 5. 5~9월 자료군의 LOYO 교차검증에서 현장 Chl-a 농도와 예측 농도의 비교(n = 10). 점선은 1:1 선이다.</figcaption> </figure> </div>
 
 ### 6.3 세부목적 2 · 작성 예정
 
@@ -402,6 +419,7 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 
 ## 8. 결론 {#conclusion}
 작성 예정
+</div>
 
 ### 부록 · 재현성 및 연구 기여 {#reproduce}
 
