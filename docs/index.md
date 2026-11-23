@@ -434,8 +434,70 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 주: 전체기간과 5~9월의 R², RMSE, MAE는 회귀식 구축자료에 대한 적합도이다. LOYO 검증 통계량은 각 연도를 제외한 회귀식의 예측값을 통합하여 산출하였으며, 검증 R²는 1 − SSE/SST로 계산하였다. LOYO 열의 기울기와 절편은 연도별 제외 회귀식의 범위이며, Bias는 예측값에서 실측값을 뺀 값의 평균이다.
 
 <figure class="report-figure" id="figure-4"> <a href="{{ '/figures/figure4_ndci_chla_relationship.png' | relative_url }}" target="_blank" rel="noopener"> <img src="{{ '/figures/figure4_ndci_chla_relationship.png' | relative_url }}" alt="전체기간과 5~9월 자료군의 Sentinel-2 NDCI와 현장 Chl-a 농도 산점도 및 선형회귀선" loading="lazy"> </a> <figcaption>그림 4. Sentinel-2 NDCI와 현장 Chl-a 농도의 관계. (a) 전체기간(2021년 1월~2026년 9월, n = 32), (b) 각 연도의 5~9월 통합자료(n = 10). 점선은 각 자료군의 선형회귀선이다.</figcaption> </figure> <figure class="report-figure" id="figure-5"> <a href="{{ '/figures/figure5_loyo_validation.png' | relative_url }}" target="_blank" rel="noopener"> <img src="{{ '/figures/figure5_loyo_validation.png' | relative_url }}" alt="5~9월 자료군의 LOYO 교차검증에 따른 현장 Chl-a 농도와 예측 농도 비교" loading="lazy"> </a> <figcaption>그림 5. 5~9월 자료군의 LOYO 교차검증에서 현장 Chl-a 농도와 예측 농도의 비교(n = 10). 점선은 1:1 선이다.</figcaption> </figure> 
+
 ### 6.3 세부목적 2 · 작성 예정
 
+<figure class="report-figure" id="figure-6">
+  <div class="figure-grid figure-grid-3x3">
+    <a href="{{ '/figures/figure6.Deviationmap_0508.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0508.png' | relative_url }}"
+           alt="2026년 5월 8일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0513.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0513.png' | relative_url }}"
+           alt="2026년 5월 13일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0518.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0518.png' | relative_url }}"
+           alt="2026년 5월 18일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0523.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0523.png' | relative_url }}"
+           alt="2026년 5월 23일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0528.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0528.png' | relative_url }}"
+           alt="2026년 5월 28일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0602.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0602.png' | relative_url }}"
+           alt="2026년 6월 2일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0607.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0607.png' | relative_url }}"
+           alt="2026년 6월 7일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0612.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0612.png' | relative_url }}"
+           alt="2026년 6월 12일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0617.png' | relative_url }}"
+       target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0617.png' | relative_url }}"
+           alt="2026년 6월 17일 채수지점 기준 클로로필-a 편차 지도"
+           loading="lazy">
+    </a>
+  </div>
+  <figcaption>
+    <strong>그림 6. 채수지점 기준 클로로필-a 편차 지도의 시계열 변화.
+  </figcaption>
+</figure>
 
 ### 6.4 세부목적 3 · 작성 예정
 
