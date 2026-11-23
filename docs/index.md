@@ -473,6 +473,20 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 </figure>
 
 
+<figure class="report-figure" id="figure-7">
+  <a href="{{ '/figures/figure7.AbsoluteDeviation_AreaPercentage_current.png' | relative_url }}"
+     target="_blank" rel="noopener">
+    <img
+      src="{{ '/figures/figure7.AbsoluteDeviation_AreaPercentage_current.png' | relative_url }}"
+      alt="현재 채수지점 기준 절대편차 구간별 면적 비율"
+      loading="lazy">
+  </a>
+  <figcaption>
+    <strong>그림 7. 현재 채수지점 기준 절대편차 구간별 면적 비율.</strong>
+  </figcaption>
+</figure>
+
+
 ### 6.4 세부목적 3 · 작성 예정
 
 
