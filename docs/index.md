@@ -445,32 +445,33 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
     <a href="{{ '/figures/figure6.Deviationmap_0513.png' | relative_url }}" target="_blank" rel="noopener">
       <img src="{{ '/figures/figure6.Deviationmap_0513.png' | relative_url }}" alt="2026년 5월 13일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
     </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0515.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0515.png' | relative_url }}" alt="2026년 5월 15일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
     <a href="{{ '/figures/figure6.Deviationmap_0518.png' | relative_url }}" target="_blank" rel="noopener">
       <img src="{{ '/figures/figure6.Deviationmap_0518.png' | relative_url }}" alt="2026년 5월 18일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0523.png' | relative_url }}" target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0523.png' | relative_url }}" alt="2026년 5월 23일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0528.png' | relative_url }}" target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0528.png' | relative_url }}" alt="2026년 5월 28일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0602.png' | relative_url }}" target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0602.png' | relative_url }}" alt="2026년 6월 2일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
-    </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0607.png' | relative_url }}" target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0607.png' | relative_url }}" alt="2026년 6월 7일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
     </a>
     <a href="{{ '/figures/figure6.Deviationmap_0612.png' | relative_url }}" target="_blank" rel="noopener">
       <img src="{{ '/figures/figure6.Deviationmap_0612.png' | relative_url }}" alt="2026년 6월 12일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
     </a>
-    <a href="{{ '/figures/figure6.Deviationmap_0617.png' | relative_url }}" target="_blank" rel="noopener">
-      <img src="{{ '/figures/figure6.Deviationmap_0617.png' | relative_url }}" alt="2026년 6월 17일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    <a href="{{ '/figures/figure6.Deviationmap_0801.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0801.png' | relative_url }}" alt="2026년 8월 1일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0806.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0806.png' | relative_url }}" alt="2026년 8월 6일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0912.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0912.png' | relative_url }}" alt="2026년 9월 12일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="{{ '/figures/figure6.Deviationmap_0930.png' | relative_url }}" target="_blank" rel="noopener">
+      <img src="{{ '/figures/figure6.Deviationmap_0930.png' | relative_url }}" alt="2026년 9월 30일 편차 지도" loading="lazy" style="width:100%; height:auto; display:block;">
     </a>
   </div>
   <figcaption>
     <strong>그림 6. 채수지점 기준 클로로필-a 편차 지도의 시계열 변화.</strong>
   </figcaption>
 </figure>
+
 
 ### 6.4 세부목적 3 · 작성 예정
 
