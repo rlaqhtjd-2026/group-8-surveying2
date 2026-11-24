@@ -435,7 +435,7 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 
 <figure class="report-figure" id="figure-4"> <a href="{{ '/figures/figure4_ndci_chla_relationship.png' | relative_url }}" target="_blank" rel="noopener"> <img src="{{ '/figures/figure4_ndci_chla_relationship.png' | relative_url }}" alt="전체기간과 5~9월 자료군의 Sentinel-2 NDCI와 현장 Chl-a 농도 산점도 및 선형회귀선" loading="lazy"> </a> <figcaption>그림 4. Sentinel-2 NDCI와 현장 Chl-a 농도의 관계. (a) 전체기간(2021년 1월~2026년 9월, n = 32), (b) 각 연도의 5~9월 통합자료(n = 10). 점선은 각 자료군의 선형회귀선이다.</figcaption> </figure> <figure class="report-figure" id="figure-5"> <a href="{{ '/figures/figure5_loyo_validation.png' | relative_url }}" target="_blank" rel="noopener"> <img src="{{ '/figures/figure5_loyo_validation.png' | relative_url }}" alt="5~9월 자료군의 LOYO 교차검증에 따른 현장 Chl-a 농도와 예측 농도 비교" loading="lazy"> </a> <figcaption>그림 5. 5~9월 자료군의 LOYO 교차검증에서 현장 Chl-a 농도와 예측 농도의 비교(n = 10). 점선은 1:1 선이다.</figcaption> </figure> 
 
-### 6.3 세부목적 2 · 작성 예정
+### 6.3 세부목적 2 · 현재 채수지점의 공간적 대표 범위 산출
 
 <table class="report-table" id="table-negative-pixels">
   <caption>
@@ -847,7 +847,7 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
   </p>
 </div>
 
-### 6.4 세부목적 3 · 작성 예정
+### 6.4 세부목적 3 ·  기존·현재 채수지점의 공간적 대표 범위 비교를 통한 채수지점 변경의 적절성 평가
 
 <table class="report-table" id="table-past-point-chla">
   <caption>
