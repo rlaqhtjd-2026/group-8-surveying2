@@ -709,6 +709,8 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
   </figcaption>
 </figure>
 
+현재 채수지점 단일 픽셀의 추정 Chl-a 농도를 기준으로 각 픽셀의 편차(D = 해당 픽셀 추정 Chl-a - 기준 픽셀 추정 Chl-a, mg/m³)를 산출했다. 5월 13일은 기준 픽셀 추정 농도가 음수로 산출되고 수면 상당 부분이 결측(Chl-a<0)으로 나타났다.
+5월 8일은  –5≤D<5 구간이, 5월 18일은 D>15 구간이 넓게 분포했다. 9월 12일은  D<-15의 구간이 대부분을 차지하고 5월 15일, 6월 12일, 8월 1일, 8월 6일, 9월 30일에는 여러 편차 구간이 혼재했다. 
 
 <figure class="report-figure" id="figure-7">
   <a href="{{ '/figures/figure7.AbsoluteDeviation_AreaPercentage_current.png' | relative_url }}"
@@ -736,6 +738,8 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
   </figcaption>
 </figure>
 
+5월 8일 MAE 4.05, Bias +2.13로 가장 낮았으며, 9월 12일 MAE 23.79, Bias -21.12로 절대 크기가 가장 컸다. 그 외 시기는 5월 15일 7.80(+2.18), 9월 30일 9.80(+1.70), 8월 6일 11.26(+6.80), 6월 12일 11.87(+3.51), 5월 18일 17.57$(+17.30), 8월 1일 18.64(+17.10) 순으로 나타났다.
+
 <figure class="report-figure" id="figure-9">
   <a href="{{ '/figures/figure9.RepresentativeArea_Ratio_current.png' | relative_url }}"
      target="_blank" rel="noopener">
@@ -749,9 +753,11 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
   </figcaption>
 </figure>
 
+5월 8일 8.897km²(78.79%)로 가장 높았고, 9월 12일 1.012km²(8.19%)로 가장 낮았다. 그 외 시기는 5월 15일 5.098km²(47.55%), 9월 30일 4.986km²(38.39%), 8월 6일 4.009km²($36.15%), 8월 1일 4.229km²(33.73%), 6월 12일 4.311km²(32.89%), 5월 18일 1.588km²(13.86%)이다.
+
 <div class="report-table-wrap">
   <table class="report-table">
-    <caption>표 5. 현재 채수지점의 기준 픽셀과 인접 수역 간 Chl-a 추정 농도 비교</caption>
+    <caption>표 8. 현재 채수지점의 기준 픽셀과 인접 수역 간 Chl-a 추정 농도 비교</caption>
     <thead>
       <tr>
         <th scope="col">촬영일</th>
