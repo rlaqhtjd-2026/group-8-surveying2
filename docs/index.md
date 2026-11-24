@@ -512,6 +512,96 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
   </figcaption>
 </figure>
 
+<div class="report-table-wrap">
+  <table class="report-table">
+    <caption>표 5. 현재 채수지점의 기준 픽셀과 인접 수역 간 Chl-a 추정 농도 비교</caption>
+    <thead>
+      <tr>
+        <th scope="col">촬영일</th>
+        <th scope="col">기준 픽셀 Chl-a<br>(mg/m³)</th>
+        <th scope="col">3×3 수역 픽셀 중앙값<br>(mg/m³)</th>
+        <th scope="col">편차<br>(mg/m³)</th>
+        <th scope="col">절대편차<br>(mg/m³)</th>
+        <th scope="col">국지적 일관성<br>기준 충족 여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2026-05-08</td>
+        <td>17.57</td>
+        <td>18.33</td>
+        <td>-0.76</td>
+        <td>0.76</td>
+        <td>충족</td>
+      </tr>
+      <tr>
+        <td>2026-05-15</td>
+        <td>20.59</td>
+        <td>20.59</td>
+        <td>0.00</td>
+        <td>0.00</td>
+        <td>충족</td>
+      </tr>
+      <tr>
+        <td><strong>2026-05-18</strong></td>
+        <td>4.80</td>
+        <td>23.76</td>
+        <td><strong>-18.96</strong></td>
+        <td><strong>18.96</strong></td>
+        <td><strong>미충족</strong></td>
+      </tr>
+      <tr>
+        <td>2026-06-12</td>
+        <td>45.37</td>
+        <td>40.83</td>
+        <td>+4.54</td>
+        <td>4.54</td>
+        <td>충족</td>
+      </tr>
+      <tr>
+        <td>2026-08-01</td>
+        <td>34.87</td>
+        <td>37.64</td>
+        <td>-2.77</td>
+        <td>2.77</td>
+        <td>충족</td>
+      </tr>
+      <tr>
+        <td>2026-08-06</td>
+        <td>42.79</td>
+        <td>41.13</td>
+        <td>+1.66</td>
+        <td>1.66</td>
+        <td>충족</td>
+      </tr>
+      <tr>
+        <td><strong>2026-09-12</strong></td>
+        <td>54.12</td>
+        <td>35.15</td>
+        <td><strong>+18.96</strong></td>
+        <td><strong>18.96</strong></td>
+        <td><strong>미충족</strong></td>
+      </tr>
+      <tr>
+        <td>2026-09-30</td>
+        <td>51.56</td>
+        <td>51.95</td>
+        <td>-0.39</td>
+        <td>0.39</td>
+        <td>충족</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    주: Chl-a 농도는 2021~2026년 5~9월 자료를 이용한
+    NDCI 회귀식(Chl-a = 191.6889 × NDCI + 23.7571)으로 추정하였다.
+    3×3 수역 픽셀 중앙값은 기준 픽셀을 포함한 9개 수역 픽셀에서 산출하였다.
+    편차는 기준 픽셀 농도에서 3×3 수역 픽셀 중앙값을 뺀 값이며,
+    절대편차가 5 mg/m³ 이하인 경우 국지적 일관성 기준을 충족한 것으로 분류하였다.
+    2026년 5월 13일은 기준 픽셀에서 음수 Chl-a 농도가 추정되어
+    분석 대상에서 제외하였다.
+  </p>
+</div>
 
 ### 6.4 세부목적 3 · 작성 예정
 
