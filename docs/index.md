@@ -849,6 +849,66 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 
 ### 6.4 세부목적 3 · 작성 예정
 
+<table class="report-table" id="table-past-point-chla">
+  <caption>
+    표 9. 날짜별 과거 채수지점의 클로로필-a 농도와 백분위 순위
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">촬영 날짜</th>
+      <th scope="col">과거 채수지점 농도 (mg/m³)</th>
+      <th scope="col">백분위 순위 (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-05-08</td>
+      <td>17.754</td>
+      <td>36.16</td>
+    </tr>
+    <tr>
+      <td>2026-05-13</td>
+      <td>20.222</td>
+      <td>63.49</td>
+    </tr>
+    <tr>
+      <td>2026-05-15</td>
+      <td>24.540</td>
+      <td>65.25</td>
+    </tr>
+    <tr>
+      <td>2026-05-18</td>
+      <td>31.501</td>
+      <td>84.74</td>
+    </tr>
+    <tr>
+      <td>2026-06-12</td>
+      <td>42.772</td>
+      <td>45.01</td>
+    </tr>
+    <tr>
+      <td>2026-08-01</td>
+      <td>41.165</td>
+      <td>42.31</td>
+    </tr>
+    <tr>
+      <td>2026-08-06</td>
+      <td>44.374</td>
+      <td>40.95</td>
+    </tr>
+    <tr>
+      <td>2026-09-12</td>
+      <td>23.197</td>
+      <td>26.60</td>
+    </tr>
+    <tr>
+      <td>2026-09-30</td>
+      <td>49.608</td>
+      <td>43.14</td>
+    </tr>
+  </tbody>
+</table>
+
 <figure class="report-figure" id="figure-10">
   <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; margin-bottom:1rem;">
     <a href="{{ '/figures/figure10.Deviationmap_past_0508.png' | relative_url }}" target="_blank" rel="noopener">
@@ -883,6 +943,8 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
     <strong>그림 10. 과거 채수지점 기준 클로로필-a 편차 지도의 시계열 변화</strong>
   </figcaption>
 </figure>
+
+5월 8일에는 수계 전반에서 -5 ≤ D ≤ 5 mg/m³ 범위가 우세했다. 5월 13일에는 수면 상당 부분이 결측(음수 추정값)으로 표시된 가운데, 유효 픽셀에서는 음의 편차 구간이 주로 관측됐다. 5월 18일에는 수계 전반에서 D < -15 mg/m³ 등 음의 편차 구간이 넓게 분포했다. 그 외 시기인 5월 15일, 6월 12일, 8월 1일, 8월 6일, 9월 12일, 9월 30일에는 여러 편차 구간이 혼재했다.
 
 <figure class="report-figure" id="figure-11">
   <a href="{{ '/figures/figure11.AbsoluteDeviation_AreaPercentage_past.png' | relative_url }}"
