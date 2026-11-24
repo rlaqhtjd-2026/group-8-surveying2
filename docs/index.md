@@ -437,6 +437,180 @@ Bias가 양수이면 주변 수역이 채수지점보다 평균적으로 높은 
 
 ### 6.3 세부목적 2 · 작성 예정
 
+<table class="report-table" id="table-negative-pixels">
+  <caption>
+    표 5. 날짜별 음수 추정 픽셀 수와 음수 제외 분석 픽셀 수
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">촬영 날짜</th>
+      <th scope="col">전체 픽셀 수</th>
+      <th scope="col">음수 픽셀 수</th>
+      <th scope="col">음수 픽셀 비율 (%)</th>
+      <th scope="col">음수 제외 분석 픽셀 수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-05-08</td>
+      <td>28,413</td>
+      <td>204</td>
+      <td>0.72</td>
+      <td>28,209</td>
+    </tr>
+    <tr>
+      <td>2026-05-13</td>
+      <td>31,235</td>
+      <td>22,841</td>
+      <td>73.13</td>
+      <td>8,394</td>
+    </tr>
+    <tr>
+      <td>2026-05-15</td>
+      <td>28,672</td>
+      <td>1,892</td>
+      <td>6.60</td>
+      <td>26,780</td>
+    </tr>
+    <tr>
+      <td>2026-05-18</td>
+      <td>31,257</td>
+      <td>2,626</td>
+      <td>8.40</td>
+      <td>28,631</td>
+    </tr>
+    <tr>
+      <td>2026-06-12</td>
+      <td>33,102</td>
+      <td>363</td>
+      <td>1.10</td>
+      <td>32,739</td>
+    </tr>
+    <tr>
+      <td>2026-08-01</td>
+      <td>32,088</td>
+      <td>769</td>
+      <td>2.40</td>
+      <td>31,319</td>
+    </tr>
+    <tr>
+      <td>2026-08-06</td>
+      <td>28,853</td>
+      <td>1,149</td>
+      <td>3.98</td>
+      <td>27,704</td>
+    </tr>
+    <tr>
+      <td>2026-09-12</td>
+      <td>32,247</td>
+      <td>1,377</td>
+      <td>4.27</td>
+      <td>30,870</td>
+    </tr>
+    <tr>
+      <td>2026-09-30</td>
+      <td>33,427</td>
+      <td>986</td>
+      <td>2.95</td>
+      <td>32,441</td>
+    </tr>
+  </tbody>
+</table>
+
+2026년 5월~9월 9개 시기 영상의 음수 추정 픽셀(Chl-a < 0) 제외 유효 분석 픽셀을 기준으로 산출한 핵심 결과는 다음과 같다. 5월 13일 전체 31,235개 중 음수 픽셀이 22,841개(73.13%, 유효 8,394개)로 가장 많았고, 현재 채수지점 농도도 -167.932mg/m³로 산출되어 정량 지표에서 제외하였다. 그 외 8개 시기의 음수 픽셀 비율은 0.72%~8.40%이다.
+
+<table class="report-table" id="table-chla-quantiles">
+  <caption>
+    표 6. 날짜별 클로로필-a 추정값의 분위수 통계 (mg/m³)
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">촬영 날짜</th>
+      <th scope="col">최솟값</th>
+      <th scope="col">제1사분위수</th>
+      <th scope="col">중앙값</th>
+      <th scope="col">제3사분위수</th>
+      <th scope="col">최댓값</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-05-08</td>
+      <td>0.054</td>
+      <td>16.647</td>
+      <td>18.994</td>
+      <td>21.359</td>
+      <td>114.473</td>
+    </tr>
+    <tr>
+      <td>2026-05-13</td>
+      <td>0.001</td>
+      <td>6.532</td>
+      <td>13.828</td>
+      <td>32.190</td>
+      <td>215.446</td>
+    </tr>
+    <tr>
+      <td>2026-05-15</td>
+      <td>0.003</td>
+      <td>16.315</td>
+      <td>21.786</td>
+      <td>26.659</td>
+      <td>125.261</td>
+    </tr>
+    <tr>
+      <td>2026-05-18</td>
+      <td>0.003</td>
+      <td>14.669</td>
+      <td>21.631</td>
+      <td>27.302</td>
+      <td>146.040</td>
+    </tr>
+    <tr>
+      <td>2026-06-12</td>
+      <td>0.019</td>
+      <td>38.758</td>
+      <td>44.078</td>
+      <td>55.497</td>
+      <td>142.837</td>
+    </tr>
+    <tr>
+      <td>2026-08-01</td>
+      <td>0.044</td>
+      <td>37.189</td>
+      <td>43.467</td>
+      <td>55.871</td>
+      <td>215.446</td>
+    </tr>
+    <tr>
+      <td>2026-08-06</td>
+      <td>0.124</td>
+      <td>40.170</td>
+      <td>46.800</td>
+      <td>54.905</td>
+      <td>195.952</td>
+    </tr>
+    <tr>
+      <td>2026-09-12</td>
+      <td>0.124</td>
+      <td>22.730</td>
+      <td>29.877</td>
+      <td>41.273</td>
+      <td>144.571</td>
+    </tr>
+    <tr>
+      <td>2026-09-30</td>
+      <td>0.050</td>
+      <td>45.376</td>
+      <td>51.261</td>
+      <td>59.255</td>
+      <td>157.747</td>
+    </tr>
+  </tbody>
+</table>
+
+추정 Chl-a 중앙값은 5월 8일 18.994mg/m³, 5월 13일 13.828mg/m³, 5월 15일 21.786mg/m³, 5월 18일 21.631mg/m³, 6월 12일 44.078mg/m³, 8월 1일 43.467mg/m³, 8월 6일 46.800mg/m³, 9월 12일 29.877mg/m³, 9월 30일 51.261mg/m³이다.
+
 <figure class="report-figure" id="figure-6">
   <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; margin-bottom:1rem;">
     <a href="{{ '/figures/figure6.Deviationmap_0508.png' | relative_url }}" target="_blank" rel="noopener">
